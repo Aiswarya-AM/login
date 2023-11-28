@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EarthRhythms</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/assets/earthfavicon.png" />
+  </head>
+  <body>
+    <form id="login" class="registerForm" onsubmit="validateDetails(event)">
+      <h2>Sign-in</h2>
+      <input
+        type="text"
+        id="loginEmail"
+        class="inputFieldLogin"
+        placeholder="Email"
+        required
+      /><br />
+      <input
+        id="loginPassword"
+        class="inputFieldLogin"
+        type="password"
+        placeholder="Password"
+        required
+      /><br /><br />
+      <input
+        type="submit"
+        class="signButton"
+        value="Login"
+        name="signInButton"
+      /><br />
+      <p class="paragraph">
+        Don't have an account?&nbsp;&nbsp;<span
+          class="footerMessage"
+          onclick="signUpForm()"
+          >sign-up</span>
+      </p>
+    </form>
+
+    <form
+      id="signUp"
+      class="registerForm"
+      onsubmit="return validateForm(event)"
+    >
+      <h2>Sign-up</h2>
+      <label>Name</label><br />
+      <input
+        type="text"
+        id="userName"
+        class="inputFieldSignUp"
+        required
+      /><br />
+      <label>Email</label><br />
+      <input id="email" class="inputFieldSignUp" type="email" required /><br />
+      <label>Mobile Number</label><br />
+      <input
+        id="phoneNumber"
+        class="inputFieldSignUp"
+        type="number"
+        minlength="10"
+        required
+      /><br />
+      <label>Password</label><br />
+      <input
+        id="password"
+        class="inputFieldSignUp"
+        type="password"
+        required
+      /><br /><br />
+      <input
+        type="submit"
+        class="signButton"
+        value="Sign-up"
+        name="signUpButton"
+      /><br />
+      <p class="paragraph">
+        Already have an account?&nbsp;&nbsp;<span
+          class="footerMessage"
+          onclick="signInForm()"
+          >sign-in</span>
+      </p>
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>
